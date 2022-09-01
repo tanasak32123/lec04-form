@@ -1,0 +1,41 @@
+<%
+=begin%>
+ <form accept-charset="UTF-8" action="/main/test_post" method="post">
+    <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+    <div style="display:flex;">
+        <div style="margin-right:20px;">
+            <label for="subject">ชื่อวิชา</label><br>
+            <input type="text" name="subject1" placeholder="ชื่อวิชาที่ 1"><br><br>
+            <input type="text" name="subject2" placeholder="ชื่อวิชาที่ 2"><br><br>
+            <input type="text" name="subject3" placeholder="ชื่อวิชาที่ 3"><br><br>
+        </div>
+        <div>
+            <label for="score">คะแนน</label><br>
+            <input type="number" name="score1" placeholder="คะแนนวิชาที่ 1"><br><br>
+            <input type="number" name="score2" placeholder="คะแนนวิชาที่ 2"><br><br>
+            <input type="number" name="score3" placeholder="คะแนนวิชาที่ 3"><br><br>
+        </div>
+    </div>
+    <input type="submit" value="submit">
+</form> 
+<%
+=end%>
+
+<%= form_with url: "/main/test_post", method: :post, data: {turbo: false} do |form| %>
+    <div style="display:flex;">
+        <div style="margin-right:20px;">
+            <label for="subject">ชื่อวิชา</label><br>
+            <input type="text" name="subject1" placeholder="ชื่อวิชาที่ 1"><br><br>
+            <input type="text" name="subject2" placeholder="ชื่อวิชาที่ 2"><br><br>
+            <input type="text" name="subject3" placeholder="ชื่อวิชาที่ 3"><br><br>
+        </div>
+        <div>
+            <label for="score">คะแนน</label><br>
+            <input type="number" name="score1" placeholder="คะแนนวิชาที่ 1"><br><br>
+            <input type="number" name="score2" placeholder="คะแนนวิชาที่ 2"><br><br>
+            <input type="number" name="score3" placeholder="คะแนนวิชาที่ 3"><br><br>
+        </div>
+    </div>
+  <input type="submit" value="submit">
+<% end %>
+
